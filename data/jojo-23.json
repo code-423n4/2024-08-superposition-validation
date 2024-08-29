@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "jojo",
+  "risk": "3",
+  "title": "Functions of `ISeawaterExecutors` miss access controls on ``SeaWaterAMM``, allowing unauthorized users to access them",
+  "issueId": 23,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/23"
+}
