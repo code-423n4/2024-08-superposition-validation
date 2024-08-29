@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Bozwkd",
+  "risk": "3",
+  "title": "Possible reetrancy in the OwnershipNFTs contract",
+  "issueId": 21,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/21"
+}
