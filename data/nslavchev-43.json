@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "nslavchev",
+  "risk": "2",
+  "title": "If both ratios passed to _get_amount_0_delta are 0 the logic will break",
+  "issueId": 43,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/43"
+}
