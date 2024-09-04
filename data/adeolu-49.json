@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "adeolu",
+  "risk": "2",
+  "title": "`bytes data` param is not passed to ERC721 recipient as expected by EIP-712",
+  "issueId": 49,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/49"
+}
