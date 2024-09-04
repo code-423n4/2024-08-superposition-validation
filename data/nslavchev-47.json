@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "nslavchev",
+  "risk": "2",
+  "title": "Unchecked negation for liquidity in get_amount_0_delta and get_amount_1_delta in sqrt_price_maths",
+  "issueId": 47,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/47"
+}
