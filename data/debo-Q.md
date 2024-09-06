@@ -1,6 +1,10 @@
 ## Title
 OwnershipNFTs has Non-Unique tokenURI Functionality
-
+•	Severity: QA
+•	Impact: URI behavior can limit the usability of the NFTs.
+•	Status: Unresolved
+•	File: OwnershipNFTs.sol
+•	Lines Affected: 181-184
 ## URL
 ```url
 https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/OwnershipNFTs.sol#L181-L184
