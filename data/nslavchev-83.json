@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "nslavchev",
+  "risk": "3",
+  "title": "StoragePositions.new function doesn't check if 'id' has been initialized before",
+  "issueId": 83,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/83"
+}
