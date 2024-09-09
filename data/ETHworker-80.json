@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "ETHworker",
+  "risk": "2",
+  "title": "Superposition Fee Calculation Inaccuracies During Rapid Price Volatility",
+  "issueId": 80,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/80"
+}
