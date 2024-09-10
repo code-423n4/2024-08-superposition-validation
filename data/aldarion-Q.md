@@ -1,7 +1,7 @@
 ## 1. Missing Functionality to Update fee_protocol Value
 ### Impact
 
-fee_protocol value, which is critical for calculating protocol fees during swaps, is never initialized or set in the contract. This means that the fee_protocol value will always default to 0, effectively disabling the collection of protocol fees
+fee_protocol value, which is used for calculating protocol fees during swaps, is never initialized or set in the contract. This means that the fee_protocol value will always default to 0, effectively disabling the protocol fees
 
 ### Proof of Concept
 
@@ -50,8 +50,6 @@ https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac
                 state.protocol_fee += u128::try_from(delta).or(Err(Error::FeeTooHigh))?;
             }
 ```
-
-
 
 
 ### Tools Used
