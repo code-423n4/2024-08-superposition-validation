@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "burn_position_AE401070 will leave liquidity and fees stuck in the contract if uncollected",
+  "issueId": 106,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/106"
+}
