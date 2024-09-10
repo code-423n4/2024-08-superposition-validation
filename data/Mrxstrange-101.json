@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Mrxstrange",
+  "risk": "2",
+  "title": "Improper Memory Layout Handling for returnData",
+  "issueId": 101,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/101"
+}
