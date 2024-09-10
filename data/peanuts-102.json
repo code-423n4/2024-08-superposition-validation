@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "There is no access control when changing sensitive data in pool.rs",
+  "issueId": 102,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/102"
+}
