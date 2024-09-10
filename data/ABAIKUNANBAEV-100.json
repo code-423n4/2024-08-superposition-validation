@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "transfer() and transferFrom() functions are incorrectly encoded in wasm_erc20",
+  "issueId": 100,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/100"
+}
