@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "debo",
+  "risk": "3",
+  "title": "lib.rs contract has Missing Protection against Signature Replay Attacks on swap_2_internal_erc20 function",
+  "issueId": 113,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/113"
+}
