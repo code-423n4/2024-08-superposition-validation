@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "debo",
+  "risk": "2",
+  "title": "lib.rs contract has DoS with Failed Call on swap_internal function",
+  "issueId": 114,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/114"
+}
