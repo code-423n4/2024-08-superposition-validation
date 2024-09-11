@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "14Kattel",
+  "risk": "3",
+  "title": "Oracle Price Manipulation Due to Lack of Proper Validation in SeawaterAMM.sol",
+  "issueId": 125,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/125"
+}
