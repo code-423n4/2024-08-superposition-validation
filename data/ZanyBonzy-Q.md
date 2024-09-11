@@ -248,3 +248,159 @@ The function to enable pool - `enablePool579DA658` is intended to be called by t
 ```
 
 ***
+
+### Non-existent function in referenced on SeawaterAMM.sol
+ 
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L487-L502
+
+#### Impact
+
+The `incrPositionPermit25468326E` function is implemented in SeawaterAMM.sol, but isn't implemented in any of the pool's backend library. As a result any calls to the function will always fail.
+
+```solidity
+    function incrPositionPermit25468326E(
+        address /* token */,
+        uint256 /* id */,
+        uint256 /* amount0Min */,
+        uint256 /* amount1Min */,
+        uint256 /* nonce0 */,
+        uint256 /* deadline0 */,
+        uint256 /* amount0Max */,
+        bytes memory /* sig0 */,
+        uint256 /* nonce1 */,
+        uint256 /* deadline1 */,
+        uint256 /* amount1Max */,
+        bytes memory /* sig1 */
+    ) external returns (uint256, uint256) {
+        directDelegate(_getExecutorUpdatePosition());
+    }
+```
+
+#### Recommended Mitigation Steps
+
+Recommend removing the unimplemented function.
+***
+
+### OwnershipNFTs.sol holds payable functions but have no way to rescue 
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/OwnershipNFTs.sol#L118-L162
+
+
+#### Impact
+
+A number of functions in OwnershipNFTs.sol are marked as payable, meaning they can receive ETH. But the contract implementation doesn't make use of ETH, nor is there any function to recover any ETH sent. As a result the tokens will be lost forever.
+
+```solidity
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId,
+        bytes calldata /* _data */
+    ) external payable {
+        // checks that the user is authorised
+        _transfer(_from, _to, _tokenId);
+    }
+
+    /// @inheritdoc IERC721Metadata
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId
+    ) external payable {
+        // checks that the user is authorised
+        _transfer(_from, _to, _tokenId);
+    }
+
+    /// @inheritdoc IERC721Metadata
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId
+    ) external payable {
+        _transfer(_from, _to, _tokenId);
+        _onTransferReceived(msg.sender, _from, _to, _tokenId);
+    }
+
+    /// @inheritdoc IERC721Metadata
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId,
+        bytes calldata /* _data */
+    ) external payable {
+        _transfer(_from, _to, _tokenId);
+        _onTransferReceived(msg.sender, _from, _to, _tokenId);
+    }
+
+    /// @inheritdoc IERC721Metadata
+    function approve(address _approved, uint256 _tokenId) external payable {
+        _requireAuthorised(msg.sender, _tokenId);
+        getApproved[_tokenId] = _approved;
+    }
+```
+#### Recommended Mitigation Steps
+
+Recommend removing the payable modifier from the listed functions, or introducing a function to recover andy excess tokens in the contract.
+***
+
+### Function to directly adjust position is not exposed in SeawaterAMM.sol
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L730
+
+#### Impact
+
+lib.rs holds the `adjust_position_internal` which allows users to change their position details according to sepcified giving bool. However, this function is not exposed in SeawaterAMM.sol, so as such cannot be directly queried. Also, since there's an issue with the `decrPosition09293696` function (an incorrect function definition), there's no way to for users to reduce their positons.
+
+#### Recommended Mitigation Steps
+
+Recommend exposing the function.
+***
+
+### Potential fix for `eli_incr_position` test issue.
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/maths/sqrt_price_math.rs#L252-L267
+
+https://github.com/Uniswap/v3-periphery/blob/b325bb0905d922ae61fcc7df85ee802e8df5e96c/contracts/libraries/LiquidityAmounts.sol#L128
+
+#### Impact
+
+When looking the `get_amounts_for_delta` function, it can be observed that its very similar to the `getAmountsForLiquidity` function in Uniswap's LiquidityAmounts.sol. A number of the contracts' functions are very similar. However, in this case, `get_amounts_for_delta` queries `get_amount_0_delta` and `get_amount_1_delta` rather than `get_liquidity_for_amount_0` and `get_liquidity_for_amount_0` which could be a reason for the failure.
+
+```rust
+pub fn get_amounts_for_delta(
+    sqrt_ratio_x_96: U256,
+    mut sqrt_ratio_a_x_96: U256,
+    mut sqrt_ratio_b_x_96: U256,
+    liquidity: i128,
+) -> Result<(I256, I256), Error> {
+    if sqrt_ratio_a_x_96 > sqrt_ratio_b_x_96 {
+        (sqrt_ratio_a_x_96, sqrt_ratio_b_x_96) = (sqrt_ratio_b_x_96, sqrt_ratio_a_x_96)
+    };
+    Ok(if sqrt_ratio_x_96 <= sqrt_ratio_a_x_96 {
+        (
+            get_amount_0_delta(sqrt_ratio_a_x_96, sqrt_ratio_b_x_96, liquidity)?,
+            I256::ZERO,
+        )
+    } else if sqrt_ratio_x_96 < sqrt_ratio_b_x_96 {
+        (
+            get_amount_0_delta(sqrt_ratio_x_96, sqrt_ratio_b_x_96, liquidity)?,
+            get_amount_1_delta(sqrt_ratio_a_x_96, sqrt_ratio_x_96, liquidity)?,
+        )
+    } else {
+        (
+            I256::ZERO,
+            get_amount_1_delta(sqrt_ratio_a_x_96, sqrt_ratio_b_x_96, liquidity)?,
+        )
+    })
+}
+```
+
+***
