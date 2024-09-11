@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Agontuk",
+  "risk": "2",
+  "title": "Incorrect Fee Accrual in Swap Function Leading to Potential Loss for Liquidity Providers",
+  "issueId": 135,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/135"
+}
