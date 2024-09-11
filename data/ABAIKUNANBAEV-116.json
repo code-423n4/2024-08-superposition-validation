@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "word_pos and bit_pos are incorrectly derived when flipping the tick",
+  "issueId": 116,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/116"
+}
