@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "debo",
+  "risk": "2",
+  "title": "swap_math.rs contract has denial of service in the compute_swap_step function",
+  "issueId": 124,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/124"
+}
