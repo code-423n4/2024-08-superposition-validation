@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Agontuk",
+  "risk": "2",
+  "title": "Incorrect Token Amount Handling in `swap_internal()` Can Lead to Fund Loss in Seawater AMM",
+  "issueId": 133,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/133"
+}
