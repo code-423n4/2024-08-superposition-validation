@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "debo",
+  "risk": "2",
+  "title": "Pool.rs contract has denial of service on the swap function",
+  "issueId": 117,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/117"
+}
