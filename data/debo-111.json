@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "debo",
+  "risk": "2",
+  "title": "lib.rs contract has collect_7_F21947_C function that handle loops over user inputs",
+  "issueId": 111,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/111"
+}
