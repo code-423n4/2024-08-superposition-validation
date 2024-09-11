@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "14Kattel",
+  "risk": "3",
+  "title": "Delegatecall Vulnerability Leading to Reentrancy Risk in SeawaterAMM.sol",
+  "issueId": 126,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/126"
+}
