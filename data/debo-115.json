@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "debo",
+  "risk": "3",
+  "title": "lib.rs contract even with Stylus preventing reentrancy consider adding reentrancy guards to swap_internal function",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/115"
+}
