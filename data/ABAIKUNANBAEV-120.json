@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "Setting slippage protection for users can lead to the repeated tx revert when performing swaps",
+  "issueId": 120,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/120"
+}
