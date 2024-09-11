@@ -1,4 +1,4 @@
-### OwnershipNFTs.sol doesn't fully match EIP-721's implementation.
+### 1. OwnershipNFTs.sol doesn't fully match EIP-721's implementation.
 
 * Lines of code
 
@@ -24,7 +24,7 @@ Also, according to EIP-721 metadata standard, the function should revert if `_to
 Add the check for NFT existence in the function by checking that the owner is not address(0)
 
 ***
-### OwnershipNFTs's approve function allows approved users to also perform approvals.
+### 2. OwnershipNFTs's approve function allows approved users to also perform approvals.
 
 * Lines of code
 
@@ -62,7 +62,7 @@ This is an issue because any user that had be approved to spend the token risks 
 Recommend limiting the approval to the owner and operator instead.
 ***
 
-### Exisitng backdoor for owner/operator in the `approve` function
+### 3. Exisitng backdoor for owner/operator in the `approve` function
 
 * Lines of code
  
@@ -85,7 +85,7 @@ Ensure that the owner/operator cannot approve themselves to spend a token.
 
 ***
 
-### Consider automatically collecting fees before transferring positons
+### 4. Consider automatically collecting fees before transferring positons
 
 * Lines of code
 
@@ -121,7 +121,7 @@ Recommend introducting `collect_single_to_6_D_76575_F` into the `transfer_positi
 ***
 
 
-### Functions to claim fees should be accessible even when pool is disabled
+### 5. Functions to claim fees should be accessible even when pool is disabled
 
 * Lines of code
  
@@ -174,7 +174,7 @@ Recommend removing the check for pool activity in the functions.
 ***
 
 
-### Certain getter functions limited to admin executor.
+### 6. Certain getter functions limited to admin executor.
 
 * Lines of code
 
@@ -228,7 +228,7 @@ Recommend limiting to `_getExecutorPosition` instead.
 
 ***
 
-### `enablePool579DA658` can only be queried by admin, which locks out authorized enablers and emergency council
+### 7. `enablePool579DA658` can only be queried by admin, which locks out authorized enablers and emergency council
 
 * Lines of code
 
@@ -249,7 +249,7 @@ The function to enable pool - `enablePool579DA658` is intended to be called by t
 
 ***
 
-### Non-existent function in referenced on SeawaterAMM.sol
+### 8. Non-existent function in referenced on SeawaterAMM.sol
  
 * Lines of code
 
@@ -283,7 +283,7 @@ The `incrPositionPermit25468326E` function is implemented in SeawaterAMM.sol, bu
 Recommend removing the unimplemented function.
 ***
 
-### OwnershipNFTs.sol holds payable functions but have no way to rescue 
+### 9. OwnershipNFTs.sol holds payable functions but have no way to rescue 
 
 * Lines of code
 
@@ -347,7 +347,7 @@ A number of functions in OwnershipNFTs.sol are marked as payable, meaning they c
 Recommend removing the payable modifier from the listed functions, or introducing a function to recover andy excess tokens in the contract.
 ***
 
-### Function to directly adjust position is not exposed in SeawaterAMM.sol
+### 10. Function to directly adjust position is not exposed in SeawaterAMM.sol
 
 * Lines of code
 
@@ -362,7 +362,7 @@ lib.rs holds the `adjust_position_internal` which allows users to change their p
 Recommend exposing the function.
 ***
 
-### Potential fix for `eli_incr_position` test issue.
+### 11. Potential fix for `eli_incr_position` test issue.
 
 * Lines of code
 
@@ -406,7 +406,7 @@ pub fn get_amounts_for_delta(
 ***
 
 
-### Functions involving permit can easily be dossed
+### 12. Functions involving permit can easily be dossed
 
 * Lines of code
  
@@ -451,7 +451,7 @@ try IERC20Permit(token).permit(msgSender, address(this), value, deadline, v, r, 
 ```
 ***
 
-### Lack of a deadline parameter during interactions with pools
+### 13. Lack of a deadline parameter during interactions with pools
 
 * Lines of code
  
@@ -487,7 +487,7 @@ Consider introducing a deadline parameter in all the pointed-out functions.
 
 ***
 
-### Ownership NFts lack the mint and burn functionalities
+### 14. Ownership NFts lack the mint and burn functionalities
 
 * Lines of code
 
@@ -551,7 +551,7 @@ Also, when positions are minted/burned from the pool, no function is called to m
 ***
 
 
-### Remove debugging code from production and refurbish test suite
+### 15. Remove debugging code from production and refurbish test suite
 
 * Lines of code
 
@@ -563,6 +563,107 @@ Lots of the contracts in scope stll hold the debugging code (See link above). As
 
 ```rs
 #[cfg(feature = "testing-dbg")]
+```
+
+***
+
+***
+
+
+### 16. `calldata` is not used during NFT transfers
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/OwnershipNFTs.sol#L148-L157
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/OwnershipNFTs.sol#L118-L126
+
+#### Impact
+
+`transferFrom` and `safeTransferFrom` take the `calldata` parameter but its not in used, especially in the `_onTransferReceived` hook. External integrations depending on the calldata will have issues due to the parameter not being used.
+
+```solidity
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId,
+        bytes calldata /* _data */
+    ) external payable {
+        // checks that the user is authorised
+        _transfer(_from, _to, _tokenId);
+    }
+```
+
+```solidity
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId,
+        bytes calldata /* _data */
+    ) external payable {
+        _transfer(_from, _to, _tokenId);
+        _onTransferReceived(msg.sender, _from, _to, _tokenId);
+    }
+```
+
+#### Recommended Mitigation Steps
+
+Recommend implementing the use of this parameter, or removing the functions since its redundant.
+
+***
+
+### 17. Prevent transfer to self when transferring positions
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L553-L569
+
+#### Impact
+
+`transfer_position_E_E_C7_A3_C_D` allows users to transfer tokens to themselves. It should return if from == to.
+
+```rust
+    pub fn transfer_position_E_E_C7_A3_C_D(
+        &mut self,
+        id: U256,
+        from: Address,
+        to: Address,
+    ) -> Result<(), Revert> {
+        assert_eq_or!(msg::sender(), self.nft_manager.get(), Error::NftManagerOnly);
+
+        self.remove_position(from, id);
+        self.grant_position(to, id);
+
+        #[cfg(feature = "log-events")]
+        evm::log(events::TransferPosition { from, to, id });
+
+        Ok(())
+    }
+```
+
+***
+
+### 18. `swap_2_exact_in_41203_F1_D` shouldn't allow swapping between same pools
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L327-L336
+
+#### Impact
+
+`swap_2_exact_in_41203_F1_D` allows swapping between the same pools which malicious users can attempt to leverage, trying to drain pool liqudity. Recommend reverting or returning if from == to.
+
+```rs
+    pub fn swap_2_exact_in_41203_F1_D(
+        &mut self,
+        from: Address,
+        to: Address,
+        amount: U256,
+        min_out: U256,
+    ) -> Result<(U256, U256), Revert> {
+        Pools::swap_2_internal_erc20(self, from, to, amount, min_out, None)
+    }
+}
 ```
 
 ***
