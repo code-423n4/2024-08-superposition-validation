@@ -404,3 +404,165 @@ pub fn get_amounts_for_delta(
 ```
 
 ***
+
+
+### Functions involving permit can easily be dossed
+
+* Lines of code
+ 
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L322
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L281
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L249
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L230
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L487
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L408
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L439
+
+
+#### Impact
+
+The `swap_permit_2_E_E84_A_D91`, `swap_2_exact_in_permit_2_36_B2_F_D_D8`, `incrPositionPermit25468326E`, `swapOutPermit23273373B`, `swapOut5E08A399`, `swapInPermit2CEAAB576`, `swap2ExactInPermit236B2FDD8` etc functions allow off-chain signed approvals to be used on-chain, saving gas and improving user experience.
+
+However, including these functions will make the transaction susceptible to DOS via frontrunning. An attacker can observe the transaction in the mempool, extract the permit signature and values from the calldata and execute the permit before the original transaction is processed. This would consume the nonce associated with the user's permit and cause the original transaction to fail due to the now-invalid nonce.
+
+This attack vector has been previously described in Permission Denied - [The Story of an EIP that Sinned](https://www.trust-security.xyz/post/permission-denied).
+
+#### Recommended Mitigation Steps
+
+Recommend wrapping the permit functionalities in a try catch block or its rust equivalent. Something like this may work.
+
+```solidity
+try IERC20Permit(token).permit(msgSender, address(this), value, deadline, v, r, s) {
+    // Permit executed successfully, proceed
+} catch {
+    // Check allowance to see if permit was already executed
+    uint256 currentAllowance = IERC20(token).allowance(msgSender, address(this));
+    if(currentAllowance < value) {
+        revert("Permit failed and allowance insufficient");
+    }
+    // Otherwise, proceed as if permit was successful
+}
+```
+***
+
+### Lack of a deadline parameter during interactions with pools
+
+* Lines of code
+ 
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L315
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L327
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L408
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L439
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L230
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L249
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L262
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L281
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L304
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/SeawaterAMM.sol#L322
+
+#### Impact
+
+Functions `swap_904369_B_E`, `swap_2_exact_in_41203_F1_D`, `swap_permit_2_E_E84_A_D91`, `swap_2_exact_in_permit_2_36_B2_F_D_D8`, `swapOutPermit23273373B`, `swapOut5E08A399`, `swapIn32502CA71`, `swapInPermit2CEAAB576` etc are missing deadline check.
+
+As front-running is a key aspect of AMM design, the deadline is a useful tool to ensure that users' transactions cannot be "saved for later" by miners or stay longer than needed in the mempool. The longer transactions stay in the mempool, the more likely it is that MEV bots can steal positive slippage from the transaction.
+
+#### Recommended Mitigation Steps
+
+Consider introducing a deadline parameter in all the pointed-out functions.
+
+***
+
+### Ownership NFts lack the mint and burn functionalities
+
+* Lines of code
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/sol/OwnershipNFTs.sol#L13
+
+https://github.com/code-423n4/2024-08-superposition/blob/4528c9d2dbe1550d2660dac903a8246076044905/pkg/seawater/src/lib.rs#L495-L544
+
+#### Impact
+
+Not sure the best severity for this, as the contract is described as an interface for tracking ownership positions. Yet at the same time, it holds functionalities that are pertinent to real NFTs, it can be approved and transfered. In any case, the contract lacks any functionality to mint and burn the tokens. As such, these tokens can't really be minted or burnt from users. 
+
+Also, when positions are minted/burned from the pool, no function is called to mint/burn NFTs from the caller.
+
+```rs
+    pub fn mint_position_B_C5_B086_D(
+        &mut self,
+        pool: Address,
+        lower: i32,
+        upper: i32,
+    ) -> Result<U256, Revert> {
+        let id = self.next_position_id.get();
+        self.pools.setter(pool).create_position(id, lower, upper)?;
+
+        self.next_position_id.set(id + U256::one());
+
+        let owner = msg::sender();
+
+        self.grant_position(owner, id);
+
+        #[cfg(feature = "log-events")]
+        evm::log(events::MintPosition {
+            id,
+            owner,
+            pool,
+            lower,
+            upper,
+        });
+
+        Ok(id)
+    }
+```
+```rs
+    #[allow(non_snake_case)]
+    pub fn burn_position_AE401070(&mut self, id: U256) -> Result<(), Revert> {
+        let owner = msg::sender();
+        assert_eq_or!(
+            self.position_owners.get(id),
+            owner,
+            Error::PositionOwnerOnly
+        );
+
+        self.remove_position(owner, id);
+
+        #[cfg(feature = "log-events")]
+        evm::log(events::BurnPosition { owner, id });
+
+        Ok(())
+    }
+```
+
+***
+
+
+### Remove debugging code from production and refurbish test suite
+
+* Lines of code
+
+https://github.com/search?q=repo%3Acode-423n4%2F2024-08-superposition%20%23%5Bcfg(feature%20%3D%20%22testing-dbg%22)%5D&type=code
+
+#### Impact
+
+Lots of the contracts in scope stll hold the debugging code (See link above). As a result, the codebase looked a bit cluttered. Also, the test suite and its configuration was very difficult to get under control. Lots of weird errors and failures.
+
+```rs
+#[cfg(feature = "testing-dbg")]
+```
+
+***
