@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "Unbound loop enables denial of service",
+  "issueId": 108,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/108"
+}
