@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "The proxy contract is not actually upgradeable as it has to be",
+  "issueId": 145,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/145"
+}
