@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "devival",
+  "risk": "2",
+  "title": "Sender with both `emergency_council` and `authorised_enablers` roles cannot disable the pool",
+  "issueId": 217,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/217"
+}
