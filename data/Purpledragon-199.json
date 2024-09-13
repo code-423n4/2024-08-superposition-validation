@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Purpledragon",
+  "risk": "2",
+  "title": " Unsafe Use of unwrap() in Address Conversion Leading to Potential Runtime Panics",
+  "issueId": 199,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/199"
+}
