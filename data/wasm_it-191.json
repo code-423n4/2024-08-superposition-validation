@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "wasm_it",
+  "risk": "2",
+  "title": "The `get_amounts_for_delta()` function at `sqrt_price_math.rs` is implemented incorrectly.",
+  "issueId": 191,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/191"
+}
