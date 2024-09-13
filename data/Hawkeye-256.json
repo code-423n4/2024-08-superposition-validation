@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Hawkeye",
+  "risk": "3",
+  "title": "Price incorrectly being considered to be in range and will output non-zero value for token 0 and token 1",
+  "issueId": 256,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/256"
+}
