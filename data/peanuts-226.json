@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "Anybody can modify a position and mess with the accumulated position fees because of the lack of access control",
+  "issueId": 226,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/226"
+}
