@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Purpledragon",
+  "risk": "2",
+  "title": "Vulnerability in storage_load_bytes32 Function Due to Unsafe Pointer Handling",
+  "issueId": 200,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/200"
+}
