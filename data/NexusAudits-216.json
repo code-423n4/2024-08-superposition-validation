@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Incorrect Slippage Check in swapInPermit2CEAAB576 Function Allows Excessive Slippage, Risking User Funds",
+  "issueId": 216,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/216"
+}
