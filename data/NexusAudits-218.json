@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Incorrect Slippage Protection in swapOut5E08A399 Function Leads to Potential User Fund Loss",
+  "issueId": 218,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/218"
+}
