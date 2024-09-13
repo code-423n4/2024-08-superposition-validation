@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "eta",
+  "risk": "3",
+  "title": "Incorrect Role Update in `update_emergency_council_7_D_0_C_1_C_58` Function  of `lib.rs` to Disable the Pools in Case of an Emergency",
+  "issueId": 194,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/194"
+}
