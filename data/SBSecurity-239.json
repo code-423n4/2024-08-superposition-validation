@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "SBSecurity",
+  "risk": "3",
+  "title": "token code length is not checked in wasm_erc20",
+  "issueId": 239,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/239"
+}
