@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Bauchibred",
+  "risk": "2",
+  "title": "`take_permit2()` would revert in valid instances",
+  "issueId": 249,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/249"
+}
