@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "SBSecurity",
+  "risk": "2",
+  "title": "Fees can be locked for some time due to how collect is working",
+  "issueId": 247,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/247"
+}
