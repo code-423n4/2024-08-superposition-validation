@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "SBSecurity",
+  "risk": "2",
+  "title": "operations in _mul_div should allow overflow/underflow",
+  "issueId": 244,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/244"
+}
