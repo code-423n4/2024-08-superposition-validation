@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Authorization Bypass in NFT Transfers Due to Insufficient Verification in Delegated Calls",
+  "issueId": 225,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/225"
+}
