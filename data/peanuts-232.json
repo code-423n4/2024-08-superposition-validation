@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "One token address cannot have different fee tiers",
+  "issueId": 232,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/232"
+}
