@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "0xhashiman",
+  "risk": "3",
+  "title": "Silent Overflow in get_amount_0_delta and get_amount_1_delta",
+  "issueId": 207,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/207"
+}
