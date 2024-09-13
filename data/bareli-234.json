@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "bareli",
+  "risk": "2",
+  "title": "wrong implement of get_tick_at_sqrt_ratio",
+  "issueId": 234,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/234"
+}
