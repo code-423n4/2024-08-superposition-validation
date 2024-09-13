@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "Purpledragon",
+  "risk": "3",
+  "title": " Improper Address Packing in pack_details Function Leading to Potential Data Corruption",
+  "issueId": 198,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/198"
+}
