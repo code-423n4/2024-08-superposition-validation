@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "SBSecurity",
+  "risk": "2",
+  "title": "Only the seawater admin can create a pool",
+  "issueId": 255,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/255"
+}
