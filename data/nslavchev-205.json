@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "nslavchev",
+  "risk": "3",
+  "title": "No data validation performed on create_position could lead to storage exhaustion",
+  "issueId": 205,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/205"
+}
