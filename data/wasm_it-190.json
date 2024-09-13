@@ -1,0 +1,8 @@
+{
+  "contest": 428,
+  "handle": "wasm_it",
+  "risk": "2",
+  "title": "Invariant Broken: Pools can be created with `upper tick <= lower tick`",
+  "issueId": 190,
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/190"
+}
