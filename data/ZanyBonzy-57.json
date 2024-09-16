@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Token approvals are not revoked upon transfer which can opens up unwanted backdoors into the NFTs",
   "issueId": 57,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/57"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/57",
+  "validatedIssueId": 141,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/141"
 }
