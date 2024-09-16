@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "OwnershipNFTs contract has Inconsistent Callback Verification in safeTransferFrom Functions",
   "issueId": 8,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/8"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/8",
+  "validatedIssueId": 165,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/165"
 }
