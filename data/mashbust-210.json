@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Parameter Misordering in Fee Collection Function Causes Denial of Service and Fee Loss",
   "issueId": 210,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/210"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/210",
+  "validatedIssueId": 84,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/84"
 }
