@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Lp's liquidity may be lost if re-org happens",
   "issueId": 33,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/33"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/33",
+  "validatedIssueId": 62,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/62"
 }
