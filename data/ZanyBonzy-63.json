@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`decrPosition09293696` will not work due to incorrect function signature",
   "issueId": 63,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/63"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/63",
+  "validatedIssueId": 57,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/57"
 }
