@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "update_position in pools.rs always checks if pool is enabled",
   "issueId": 86,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/86"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/86",
+  "validatedIssueId": 123,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/123"
 }
