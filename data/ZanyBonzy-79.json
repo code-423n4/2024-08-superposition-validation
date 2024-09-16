@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Incorrect amount taken users may lead to paying excess during erc20 swaps",
   "issueId": 79,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/79"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/79",
+  "validatedIssueId": 126,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/126"
 }
