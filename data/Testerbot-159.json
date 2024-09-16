@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Users unable to remove liquidity from disabled pools",
   "issueId": 159,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/159"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/159",
+  "validatedIssueId": 102,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/102"
 }
