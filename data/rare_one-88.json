@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "No Validation of Input Ranges",
   "issueId": 88,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/88"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/88",
+  "validatedIssueId": 121,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/121"
 }
