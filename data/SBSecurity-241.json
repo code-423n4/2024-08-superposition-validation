@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "when minting position we can pass low tick > upper tick, unlike UniswapV3",
   "issueId": 241,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/241"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/241",
+  "validatedIssueId": 71,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/71"
 }
