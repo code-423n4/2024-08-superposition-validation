@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "swap2ExactIn41203F1D() function won't work",
   "issueId": 235,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/235"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/235",
+  "validatedIssueId": 75,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/75"
 }
