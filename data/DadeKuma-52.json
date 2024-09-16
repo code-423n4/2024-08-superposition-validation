@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "It is not possible to set protocol fees, which results in the protocol losing funds",
   "issueId": 52,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/52"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/52",
+  "validatedIssueId": 144,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/144"
 }
