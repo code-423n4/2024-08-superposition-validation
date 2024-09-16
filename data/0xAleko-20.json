@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "OwnershipNFT transfer via `safeTransferFrom` to non-EOA will be reverted.",
   "issueId": 20,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/20"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/20",
+  "validatedIssueId": 159,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/159"
 }
