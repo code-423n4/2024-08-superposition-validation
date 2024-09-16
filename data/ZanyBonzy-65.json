@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Use of checked arithmetic when handling fee growth",
   "issueId": 65,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/65"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/65",
+  "validatedIssueId": 136,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/136"
 }
