@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Incorrect ERC721 Token Receiver Validation",
   "issueId": 162,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/162"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/162",
+  "validatedIssueId": 101,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/101"
 }
