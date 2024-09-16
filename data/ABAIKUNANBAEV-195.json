@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Price is not correctly updated in the swap() function",
   "issueId": 195,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/195"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/195",
+  "validatedIssueId": 88,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/88"
 }
