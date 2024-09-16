@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "tick.rs does not allow for fees to under/overflow, as it is supposed to be",
   "issueId": 107,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/107"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/107",
+  "validatedIssueId": 111,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/111"
 }
