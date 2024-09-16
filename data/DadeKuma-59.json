@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "An attacker can create invalid positions to inflate a pool",
   "issueId": 59,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/59"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/59",
+  "validatedIssueId": 59,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/59"
 }
