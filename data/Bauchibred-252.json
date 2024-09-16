@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Ticks are allowed to be over `int24` deviating form intended uniswap standard",
   "issueId": 252,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/252"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/252",
+  "validatedIssueId": 66,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/66"
 }
