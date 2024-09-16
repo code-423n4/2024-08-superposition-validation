@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Incorrect onERC721Received Selector Check in `_onTransferReceived()`",
   "issueId": 12,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/12"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/12",
+  "validatedIssueId": 163,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/163"
 }
