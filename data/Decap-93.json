@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Wrong require statement in OwnershipNFT::_onTransferReceived",
   "issueId": 93,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/93"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/93",
+  "validatedIssueId": 55,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/55"
 }
