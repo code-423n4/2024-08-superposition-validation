@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "mulDiv() function in full_math library does not correspond to the same UniswapV3 function at all",
   "issueId": 99,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/99"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/99",
+  "validatedIssueId": 113,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/113"
 }
