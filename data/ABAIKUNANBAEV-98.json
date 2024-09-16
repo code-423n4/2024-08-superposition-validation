@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "mulDivRoundingUp() function from full_math library deviates from the Uniswap implementation",
   "issueId": 98,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/98"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/98",
+  "validatedIssueId": 114,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/114"
 }
