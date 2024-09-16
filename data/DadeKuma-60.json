@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "A pool with high liquidity and low price may have a price overflow after swapping",
   "issueId": 60,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/60"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/60",
+  "validatedIssueId": 139,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/139"
 }
