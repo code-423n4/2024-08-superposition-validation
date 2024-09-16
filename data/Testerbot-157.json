@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Unauthorized NFT reclaiming due to uncleared approvals",
   "issueId": 157,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/157"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/157",
+  "validatedIssueId": 104,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/104"
 }
