@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Admin cannot collect protocol fee due to Incorrect Parameter Order in ERC20 Transfer Function Call ",
   "issueId": 240,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/240"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/240",
+  "validatedIssueId": 72,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/72"
 }
