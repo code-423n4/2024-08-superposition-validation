@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Incorrect Implementation of ERC721 Safe Transfer Check",
   "issueId": 193,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/193"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/193",
+  "validatedIssueId": 90,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/90"
 }
