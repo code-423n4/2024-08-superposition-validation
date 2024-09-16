@@ -4,5 +4,7 @@
   "risk": "2",
   "title": " Incorrect Update of NFT Manager in Update Emergency Council Function",
   "issueId": 70,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/70"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/70",
+  "validatedIssueId": 132,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/132"
 }
