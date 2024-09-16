@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Missing Validation for Tick Bounds in Position Creation",
   "issueId": 87,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/87"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/87",
+  "validatedIssueId": 122,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/122"
 }
