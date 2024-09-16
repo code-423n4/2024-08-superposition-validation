@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Position's fee growth can revert resulting in funds permanently locked",
   "issueId": 56,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/56"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/56",
+  "validatedIssueId": 142,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/142"
 }
