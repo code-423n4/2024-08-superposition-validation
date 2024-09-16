@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Incorrect checking of the returned data from the callback results in a safeTransferFrom() method revert",
   "issueId": 71,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/71"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/71",
+  "validatedIssueId": 131,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/131"
 }
