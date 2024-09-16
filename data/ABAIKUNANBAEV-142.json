@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Migrations facet is not set in the SeawaterAMM contract",
   "issueId": 142,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/142"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/142",
+  "validatedIssueId": 54,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/54"
 }
