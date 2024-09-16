@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Incorrect Validation in `_onTransferReceived` Function Leads to Stuck Tokens and Failed Transfers",
   "issueId": 69,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/69"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/69",
+  "validatedIssueId": 133,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/133"
 }
