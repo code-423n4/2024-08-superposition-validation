@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Incorrect implementation for `updateEmergencyCouncil`",
   "issueId": 36,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/36"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/36",
+  "validatedIssueId": 153,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/153"
 }
