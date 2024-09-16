@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "OwnershipNFTs contract has Unchecked Return Value of onERC721Received function",
   "issueId": 77,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/77"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/77",
+  "validatedIssueId": 127,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/127"
 }
