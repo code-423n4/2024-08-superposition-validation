@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Tick `low` can be set higher than tick `up` when creating a position in `pool.create_position`",
   "issueId": 223,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/223"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/223",
+  "validatedIssueId": 79,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/79"
 }
