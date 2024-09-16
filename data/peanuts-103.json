@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "fee_protocol is not set anywhere in pool.rs",
   "issueId": 103,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/103"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/103",
+  "validatedIssueId": 112,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/112"
 }
