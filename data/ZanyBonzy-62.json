@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "OwnershipNFTs.sol does not declare `supportsInterface` ",
   "issueId": 62,
-  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/62"
+  "issueUrl": "https://github.com/code-423n4/2024-08-superposition-validation/issues/62",
+  "validatedIssueId": 138,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-superposition-findings/issues/138"
 }
